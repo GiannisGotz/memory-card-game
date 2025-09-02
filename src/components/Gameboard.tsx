@@ -112,7 +112,7 @@ const Gameboard = () => {
                     <button
                         className="bg-purple-800 hover:bg-purple-200 text-white font-semibold py-1.5 px-3 sm:py-2 sm:px-4 lg:px-6 rounded-lg shadow-md transition-colors duration-200 mb-2 sm:mb-4 lg:mb-8 text-xs sm:text-sm lg:text-base"
                         onClick={shuffleCards}>
-                        Νέο παρτίδα
+                        Νέα παρτίδα
                     </button>
 
 
