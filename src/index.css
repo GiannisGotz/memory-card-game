@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  background: linear-gradient(to top, #4a62d8, #1ab28a, #746bab);
+  height: 100%;
+  justify-content: center;
+}
+
+.card-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1em;
+  row-gap: 10px;
+  place-items: center;
+  margin-bottom: 20px;
+}

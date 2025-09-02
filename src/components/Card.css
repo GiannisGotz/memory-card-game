@@ -1,0 +1,68 @@
+:root {
+    --card-radius: 6px;
+    --flip-duration: 0.4s;
+    --icon-size: 80px; /* back icon size */
+}
+
+/* The card box (parent controls overall size via grid or container) */
+.card {
+    position: relative;
+    width: 180px;
+    aspect-ratio: 1 / 1;
+    perspective: 800px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform var(--flip-duration) ease;
+    border-radius: var(--card-radius);
+    will-change: transform;
+}
+
+/* -------- Flip logic (BACK by default, FRONT when .is-flipped) -------- */
+
+.card-face {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--card-radius);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    display: grid;
+    place-items: center;
+    background-color: #c7af76;
+    z-index: 2;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: var(--card-radius);
+    display: block;
+}
+
+
+.card-back {
+    background-image: url('https://img.icons8.com/?size=100&id=2rUSkE0hxnD7&format=png&color=000000'),
+    linear-gradient(128deg, #ffc5e0 50%, #c7af76 100%);
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: var(--icon-size), cover;
+}
+
+
+.card.is-flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card,
+.card-face {
+    -webkit-tap-highlight-color: transparent;
+}
