@@ -18,8 +18,24 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 1em;
-  row-gap: 10px;
+  gap: 0.5rem;
   place-items: center;
   margin-bottom: 20px;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0;
+  }
 }
