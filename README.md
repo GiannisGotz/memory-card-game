@@ -7,7 +7,6 @@ flip cards to find matching pairs while tracking their moves and competing for t
 - Personal record system saving your best score
 - Confetti celebration when you win
 - Responsive design with Tailwind CSS
-- Greek language interface for Ariana
 - Clean TypeScript implementation with proper type safety
 
 Perfect for memory training and fun for all ages!
