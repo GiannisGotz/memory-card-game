@@ -103,13 +103,14 @@ const Gameboard = () => {
         <>
             {win === totalPairs && totalPairs > 0 && <Confetti />}
 
-            <div className="p-4 sm:p-8 min-h-screen flex items-center justify-center">
+            <div className="p-2 sm:p-4 lg:p-8 min-h-screen flex items-center justify-center">
                 <div className="text-center w-full max-w-4xl">
 
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-8 px-2">Καλώς ήρθατε στο παιχνίδι μνήμης της Αριάνας!!!</h1>
+                    <h1 className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-2 sm:mb-4 lg:mb-8 px-1 sm:px-2 leading-tight">
+                        Kαλώς ήρθατε στο παιχνίδι μνήμης της Αριάνας!!!</h1>
 
                     <button
-                        className="bg-purple-800 hover:bg-purple-200 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg shadow-md transition-colors duration-200 my-4 sm:my-8 text-sm sm:text-base"
+                        className="bg-purple-800 hover:bg-purple-200 text-white font-semibold py-1.5 px-3 sm:py-2 sm:px-4 lg:px-6 rounded-lg shadow-md transition-colors duration-200 mb-2 sm:mb-4 lg:mb-8 text-xs sm:text-sm lg:text-base"
                         onClick={shuffleCards}>
                         Νέο παρτίδα
                     </button>
@@ -133,16 +134,16 @@ const Gameboard = () => {
                         ))}
                     </div>
 
-                    <div className="flex flex-col sm:flex-row justify-center mt-4 sm:mt-8 gap-2 sm:gap-8 px-4">
+                    <div className="flex flex-col sm:flex-row justify-center mt-2 sm:mt-4 lg:mt-8 gap-1 sm:gap-2 lg:gap-8 px-1 sm:px-4">
 
                     <button
-                        className="bg-purple-800 hover:bg-purple-200 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg shadow-md transition-colors duration-200 text-sm sm:text-base"
+                        className="bg-purple-800 hover:bg-purple-200 text-white font-semibold py-1.5 px-3 sm:py-2 sm:px-4 lg:px-6 rounded-lg shadow-md transition-colors duration-200 text-xs sm:text-sm lg:text-base whitespace-nowrap"
                     >
                         Κινήσεις {count}
                     </button>
 
                 <button
-                    className="bg-purple-800 hover:bg-purple-200 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg shadow-md transition-colors duration-200 text-sm sm:text-base"
+                    className="bg-purple-800 hover:bg-purple-200 text-white font-semibold py-1.5 px-3 sm:py-2 sm:px-4 lg:px-6 rounded-lg shadow-md transition-colors duration-200 text-xs sm:text-sm lg:text-base whitespace-nowrap"
                 >
                     Ρεκόρ {record}
                 </button>
